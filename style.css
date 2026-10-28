@@ -9,7 +9,7 @@
     background-color: rgb(251, 136, 155);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: 'Comic Neue', cursive;
 }
 
 .card {
