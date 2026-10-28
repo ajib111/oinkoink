@@ -6,8 +6,8 @@ const messages = [
     "oink oink 😭",
     "Don't do this piggy",
     "Piggy, think again",
-    "Hehe nice try",
-    "No is not an option 😂",
+    
+    
     "Khar khar 🐷 pleasee",
     "Last chance, oink oink",
     "Just press yes, piggy ❤️",

@@ -1,188 +1,63 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: Arial, sans-serif;
 }
-.center-box {
-    height: 100vh;
-    background-color: rgb(251, 136, 155);
+
+body {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
-.card {
-    background: white;
-    padding: 45px 40px;
-    border-radius: 12px;
-    text-align: center;
+.container {
     width: 100%;
-    max-width: 420px;
+    text-align: center;
+    padding: 20px;
 }
-.card h1{
-    color: rgb(112, 20, 20);
-    font-size: 25px;
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
-.card a{
-    text-decoration: none;
+
+.buttons {
+    margin-bottom: 25px;
 }
-.card img{
-    width: 120px;
-    animation : zoomPulse 1.5s infinite ease-in-out;
-}
-@keyframes zoomPulse{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.15);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-.yes-btn{
-    font-family: 'Nunito';
-    background-color:rgb(234, 63, 92);
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    padding: 7px 30px 9px 30px;
-    border: 1px solid rgb(112, 20, 20);
-    border-radius: 35px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-}
-.no-btn{
-    font-family: 'Nunito';
-    background-color: rgb(255, 255, 255);
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    padding: 7px 30px 9px 30px;
-    border: 1px solid rgb(112, 20, 20);
-    border-radius: 35px;
+
+.yes-button,
+.no-button {
+    padding: 8px 25px;
+    margin: 0 5px;
+    font-size: 16px;
+    background-color: #ffe1e8;
+    border: 2px solid #ff9db4;
+    border-radius: 5px;
     cursor: pointer;
 }
-.yes-btn:hover{
-    transform: scale(1.25);
+
+.gif_container img {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    background-color: rgb(251, 136, 155);
-    height: 100vh;
-    /* justify-content: center;
-    align-items: center;  */
-}
-  
-.div1 { 
-    grid-area: 1 / 1 / 2 / 2; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image1.jpg);
-}
-.div2 { 
-    grid-area: 1 / 2 / 2 / 3; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image2.jpeg);
-}
-.div3 { 
-    grid-area: 1 / 3 / 2 / 4; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image3.jpeg);
-}
-.div4 { 
-    grid-area: 2 / 1 / 3 / 2; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image4.jpg);
-}
-.div5 { 
-    grid-area: 2 / 2 / 3 / 3; 
-    
-}
-.div6 { 
-    grid-area: 2 / 3 / 3 / 4; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image5.jpeg);
-}
-.div7 { 
-    grid-area: 3 / 1 / 4 / 2; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image6.jpeg);
-}
-.div8 { 
-    grid-area: 3 / 2 / 4 / 3; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image7.jpg);
-}
-.div9 { 
-    grid-area: 3 / 3 / 4 / 4; 
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url(images/image8.avif);
-}
+/* Phone screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
 
-.common{
-    background-color:rgba(255, 208, 216,0.5) ;
-    max-height: 420px;
-    width: 100%;
-    border: 1 px solid rgb(251, 136, 155);
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-    padding: 30px 35px;
-    position: relative;
-    /* justify-content: center;
-    align-items: center; */
-}
-.common h2{
-    left: 8;
-    position: absolute;
-    transition: transform 0.3s ease;
-}
-.common p{
-    position:absolute;
-    /* bottom: -50px; */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.common:hover h2{
-    transform: translateX(145px);
-}
-.common:hover p{
-    left : 15px;
-    right:15px;
-    transform: translateY(38px);
-    opacity: 1;
+    .gif_container img {
+        width: 180px;
+    }
+
+    .yes-button,
+    .no-button {
+        padding: 8px 22px;
+    }
 }
